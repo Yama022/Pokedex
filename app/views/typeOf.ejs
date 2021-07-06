@@ -1,0 +1,24 @@
+<%- include ('partials/header') %> 
+
+
+
+<div class="pokemon">
+
+    <% for (let elem of typeOfPokemon.pokemons) { %>
+       
+        <div class="pokemon__card">
+            <a href="/detail/<%= elem.numero%>">
+            <img src="/img/<%= elem.numero %>.png" alt="img1">
+            <div class="pokemon__info">
+               <p>#<%= elem.numero %> <%= elem.nom %></p> 
+            </div>
+        </a>
+        </div>
+     <% } %>
+
+
+
+</div>
+
+
+<%- include ('partials/footer') %> 

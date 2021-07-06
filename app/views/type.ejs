@@ -1,0 +1,24 @@
+<%- include ('partials/header') %> 
+<h3 class="type__h3">Cliquez sur un type pour voir tous les Pokémons de ce type</h3>
+
+
+<div class="pokemon">
+
+    <% for (const type of types) { %>
+        <div class="type">
+            <a href="/typeOf/<%= type.id %>">
+            <h4 class="<%=type?.name %>"><%=type.name %></h4>
+            </a>
+
+
+        </div>
+
+
+    <% } %> 
+
+
+
+</div>
+
+
+<%- include ('partials/footer') %> 

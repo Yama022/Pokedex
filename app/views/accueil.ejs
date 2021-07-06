@@ -1,0 +1,35 @@
+<%- include('partials/header') %>
+
+
+
+
+    <div class="pokemon">
+        <% for (const pokemon of pokemons) { %>
+            <div class="pokemon__card" style="background-color: #<%=pokemon?.types[0].color %>;
+                 box-shadow: 8px -6px 5px #<%=pokemon?.types[0].color%>">
+                
+
+                <a href="/detail/<%= pokemon.numero%>">
+                    <img src="/img/<%= pokemon.numero %>.png" alt="img1">
+                    <div class="pokemon__info">
+                        <p>#<%= pokemon.numero %>
+                                <%= pokemon.nom %>
+                        </p>
+                    </div>
+                </a>
+                
+            </div>
+
+            <% } %>
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <%- include('partials/footer') %>

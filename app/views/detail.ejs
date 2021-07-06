@@ -1,0 +1,114 @@
+<%- include('partials/header') %>
+
+
+<div class="pokemon">
+
+   
+        <div class="pokemon__detail">
+
+            <h2 class="detail">Détails de <%= onePokemon.nom%></h2>
+            
+            <div class="stats__pokemon">
+
+                <img src="/img/<%= onePokemon.numero %>.png" alt="img1">
+
+
+                <div class="pokemon__info__detail">
+                    <h3>#<%= onePokemon.numero %> <%= onePokemon.nom %></h3> 
+
+                    <div class="carte__ensemble">
+                    
+
+                        <% for(const card of onePokemon.types) {%> 
+
+                   <div class="carte">
+                       <p class="<%=card?.name %>" id="carte__clase__add"><%= card?.name%></p>
+                    </div> 
+
+                   <% } %> 
+                        
+                    </div>
+
+                    <div class="stats"></div>
+
+                        <h4>Statistiques</h4>
+
+                       
+
+                        <div class="stats__infos">
+                            <p class="stats__infos--title">PV </p>
+                            <p class="stats__infos--info"><%= onePokemon.pv %></p>
+                            <div class="bar">
+                                <div class="percentage has-tip"  style="width: <%=onePokemon.pv %>px" data-perc="50%">
+                                </div>
+                              </div>
+                        </div>
+
+                        <div class="stats__infos">
+                            <p class="stats__infos--title">Attaque </p>
+                            <p class="stats__infos--info"><%= onePokemon.attaque %></p>
+                            <div class="bar">
+                                <div class="percentage has-tip"  style="width: <%= onePokemon.attaque %>px" data-perc="50%">
+                                </div>
+                              </div>
+                        </div>
+
+                        <div class="stats__infos">
+                            <p class="stats__infos--title">Défense </p>
+                            <p class="stats__infos--info"><%= onePokemon.defense %></p>
+                            <div class="bar">
+                                <div class="percentage has-tip"  style="width: <%= onePokemon.defense %>px" data-perc="50%">
+                                </div>
+                              </div>
+                        </div>
+
+                        <div class="stats__infos">
+                            <p class="stats__infos--title">Attaque spé. </p>
+                            <p class="stats__infos--info"><%= onePokemon.attaque_spe %></p>
+                            <div class="bar">
+                                <div class="percentage has-tip"  style="width: <%= onePokemon.attaque_spe %>px" data-perc="50%">
+                                </div>
+                              </div>
+                        </div>
+
+                        <div class="stats__infos">
+                            <p class="stats__infos--title">Defense Spé. </p>
+                            <p class="stats__infos--info"><%= onePokemon.defense_spe %></p>
+                            <div class="bar">
+                                <div class="percentage has-tip"  style="width: <%= onePokemon.defense_spe %>px" data-perc="50%">
+                                </div>
+                              </div>
+                        </div>
+
+                        <div class="stats__infos">
+                            <p class="stats__infos--title">Vitesse </p>
+                            <p class="stats__infos--info"><%= onePokemon.vitesse %></p>
+                            <div class="bar">
+                                <div class="percentage has-tip"  style="width: <%= onePokemon.vitesse %>px" data-perc="50%">
+                                </div>
+                              </div>
+                        </div>
+
+                       
+                     
+
+                    </div>
+                    
+                    
+                    
+                        
+                         
+                 </div>
+            </div>
+            
+       
+        </div>
+
+      
+
+</div>
+
+
+
+
+<%- include('partials/footer') %>
